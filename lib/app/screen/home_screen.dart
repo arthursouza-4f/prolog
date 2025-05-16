@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:prolog_app/presentation/components/container_seleciona_modulo.dart';
-import 'package:prolog_app/presentation/screen/tire_module/tires_screen.dart';
+import 'package:prolog_app/app/components/container_seleciona_modulo.dart';
+import 'package:prolog_app/tires/presentation/screen/tires_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF0F0F0),
       appBar: AppBar(
         title: const Text('Prolog', style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xFF3C5ED9),

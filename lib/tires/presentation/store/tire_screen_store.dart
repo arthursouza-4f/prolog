@@ -1,7 +1,7 @@
 import 'package:mobx/mobx.dart';
 
-import 'package:prolog_app/data/models/tire_module/get_all_tires_model.dart';
-import 'package:prolog_app/domain/usecase/tire_module/get_all_tires_use_case.dart';
+import 'package:prolog_app/tires/data/models/get_all_tires_model.dart';
+import 'package:prolog_app/tires/domain/usecase/get_all_tires_use_case.dart';
 
 part 'tire_screen_store.g.dart';
 

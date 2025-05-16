@@ -12,5 +12,4 @@ abstract class _ConectionStore with Store {
 
   @computed
   bool get isConnected => connectivityStream.value != ConnectivityResult.none;
-
 }

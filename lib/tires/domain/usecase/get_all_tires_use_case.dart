@@ -1,5 +1,5 @@
-import 'package:prolog_app/data/models/tire_module/get_all_tires_model.dart';
-import 'package:prolog_app/domain/repository/tire_module/tire_repository.dart';
+import 'package:prolog_app/tires/data/models/get_all_tires_model.dart';
+import 'package:prolog_app/tires/domain/repository/tire_repository.dart';
 
 class GetAllTiresUseCase {
   final TireRepository _tireRepository;

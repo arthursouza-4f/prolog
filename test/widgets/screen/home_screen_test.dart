@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:prolog_app/presentation/screen/home_screen.dart';
+import 'package:prolog_app/app/screen/home_screen.dart';
 
 void main() {
   testWidgets(

@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:http_mock_adapter/http_mock_adapter.dart';
 
-import 'package:prolog_app/data/dio/dio_suport.dart';
-import 'package:prolog_app/presentation/screen/tire_module/tires_screen.dart';
+import 'package:prolog_app/core/network/dio_suport.dart';
+import 'package:prolog_app/tires/presentation/screen/tires_screen.dart';
 
 import '../../../test/helpers/dio_adapter_helper.dart';
 import '../../mocks/tire_module/tires_mock.dart';
@@ -16,11 +15,6 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   final dio = DioSuport().dio;
-  late DioAdapter dioAdapter;
-
-  setUp(() {
-    dioAdapter = DioAdapter(dio: dio, matcher: const FullHttpRequestMatcher());
-  });
 
   group('teste de integracao - tires screen', () {
     testWidgets("Verifica se pneu apareceu na tela", (teste) async {
@@ -132,6 +126,5 @@ void main() {
 
       expect(erroTitleMessage, findsOneWidget);
     });
-    
   });
 }

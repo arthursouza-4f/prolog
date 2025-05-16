@@ -103,14 +103,10 @@ class TireSize {
   int? width;
   double? rim;
 
-  TireSize({
-    this.id,
-    this.height,
-    this.width,
-    this.rim,
-  });
+  TireSize({this.id, this.height, this.width, this.rim});
 
-  factory TireSize.fromJson(Map<String, dynamic> json) => _$TireSizeFromJson(json);
+  factory TireSize.fromJson(Map<String, dynamic> json) =>
+      _$TireSizeFromJson(json);
 
   Map<String, dynamic> toJson() => _$TireSizeToJson(this);
 }
@@ -120,10 +116,7 @@ class Make {
   int? id;
   String? name;
 
-  Make({
-    this.id,
-    this.name,
-  });
+  Make({this.id, this.name});
 
   factory Make.fromJson(Map<String, dynamic> json) => _$MakeFromJson(json);
 
@@ -137,12 +130,7 @@ class Model {
   int? groovesQuantity;
   double? treadDepth;
 
-  Model({
-    this.id,
-    this.name,
-    this.groovesQuantity,
-    this.treadDepth,
-  });
+  Model({this.id, this.name, this.groovesQuantity, this.treadDepth});
 
   factory Model.fromJson(Map<String, dynamic> json) => _$ModelFromJson(json);
 
@@ -155,11 +143,7 @@ class CurrentRetread {
   RetreadModel? model;
   double? retreadCost;
 
-  CurrentRetread({
-    this.make,
-    this.model,
-    this.retreadCost,
-  });
+  CurrentRetread({this.make, this.model, this.retreadCost});
 
   factory CurrentRetread.fromJson(Map<String, dynamic> json) =>
       _$CurrentRetreadFromJson(json);
@@ -205,7 +189,8 @@ class Installed {
     this.installedPositionName,
   });
 
-  factory Installed.fromJson(Map<String, dynamic> json) => _$InstalledFromJson(json);
+  factory Installed.fromJson(Map<String, dynamic> json) =>
+      _$InstalledFromJson(json);
 
   Map<String, dynamic> toJson() => _$InstalledToJson(this);
 }
@@ -222,7 +207,8 @@ class Disposal {
     this.disposalImagesUrl,
   });
 
-  factory Disposal.fromJson(Map<String, dynamic> json) => _$DisposalFromJson(json);
+  factory Disposal.fromJson(Map<String, dynamic> json) =>
+      _$DisposalFromJson(json);
 
   Map<String, dynamic> toJson() => _$DisposalToJson(this);
 }
@@ -241,7 +227,8 @@ class Analysis {
     this.reason,
   });
 
-  factory Analysis.fromJson(Map<String, dynamic> json) => _$AnalysisFromJson(json);
+  factory Analysis.fromJson(Map<String, dynamic> json) =>
+      _$AnalysisFromJson(json);
 
   Map<String, dynamic> toJson() => _$AnalysisToJson(this);
 }
@@ -251,14 +238,10 @@ class RegistrationImage {
   int? id;
   String? url;
 
-  RegistrationImage({
-    this.id,
-    this.url,
-  });
+  RegistrationImage({this.id, this.url});
 
   factory RegistrationImage.fromJson(Map<String, dynamic> json) =>
       _$RegistrationImageFromJson(json);
 
   Map<String, dynamic> toJson() => _$RegistrationImageToJson(this);
 }
-
