@@ -29,6 +29,9 @@ Para os testes também foi usado as bibliotecas padrão fornecidas pelo próprio
 
 **Testes feitos:** Unitarios, Widgets e testes de integração
 
+## Gerenciamento de Estado
+Para o gerenciamento de estado da aplicação utilizei o MobX, escolhi MobX por conta dele ser simples de implementar, intuitivo e eu já ter familiaridade com ele. 
+
 ## Tratamento de exceções
 Para tratamento de exceções foi usada a própria extensão do DIO, que foi o pacote decidido usar nas chamadas de API. 
 
