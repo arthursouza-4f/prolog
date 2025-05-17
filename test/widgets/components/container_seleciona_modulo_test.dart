@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:prolog_app/app/components/container_seleciona_modulo.dart';
+import 'package:prolog_app/app/components/container_module_selection.dart';
 
 void main() {
   testWidgets(
@@ -11,7 +11,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: ContainerSelecionaModulo(
+            body: ContainerModuleSelection(
               title: 'Teste',
               imagePath: 'assets/imgs/gestao_pneu/icon_home_screen.png',
             ),
