@@ -1,4 +1,4 @@
-# Prolog App Desafio
+# Prolog App
 
 ### App
 
