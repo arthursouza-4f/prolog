@@ -5,7 +5,7 @@ import 'package:prolog_app/tires/data/models/get_all_tires_model.dart';
 import 'package:prolog_app/tires/data/repository/tire_repository_impl.dart';
 import 'package:prolog_app/tires/domain/usecase/get_all_tires_use_case.dart';
 
-import '../../../integration_test/mocks/tire_module/tires_mock.dart';
+import '../../../integration_test/tires/mocks/tires_mock.dart';
 import '../../helpers/dio_adapter_helper.dart';
 
 void main() async {
@@ -17,9 +17,13 @@ void main() async {
     DioAdapterHelper.createDioAdapter(
       dio: dio,
       routes: {
-        TiresMock.route: {"statusCode": 200, "data": TiresMock.responseMock1},
+        TiresMock.routeListTires: {
+          "statusCode": 200,
+          "data": TiresMock.responseListTiresMock1,
+        },
       },
     );
+
     GetAllTiresUseCase useCase = GetAllTiresUseCase(
       TireRepositoryImpl.test(dio: dio),
     );

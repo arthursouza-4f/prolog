@@ -9,23 +9,26 @@ import 'package:prolog_app/core/network/dio_suport.dart';
 import 'package:prolog_app/tires/presentation/screen/tires_screen.dart';
 
 import '../../../test/helpers/dio_adapter_helper.dart';
-import '../../mocks/tire_module/tires_mock.dart';
+import '../mocks/tires_mock.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   final dio = DioSuport().dio;
 
-  group('teste de integracao - tires screen', () {
+  group('Tela de consulta pneus - Integracao', () {
     testWidgets("Verifica se pneu apareceu na tela", (teste) async {
       //Cria os mocks das rotas
       DioAdapterHelper.createDioAdapter(
         dio: dio,
         routes: {
-          TiresMock.route: {"statusCode": 200, "data": TiresMock.responseMock1},
-          TiresMock.route2: {
+          TiresMock.routeListTires: {
             "statusCode": 200,
-            "data": TiresMock.responseMock2,
+            "data": TiresMock.responseListTiresMock1,
+          },
+          TiresMock.route2ListTires: {
+            "statusCode": 200,
+            "data": TiresMock.responseListTiresMock2,
           },
         },
       );
@@ -69,7 +72,7 @@ void main() {
       DioAdapterHelper.createDioAdapter(
         dio: dio,
         routes: {
-          TiresMock.route: {"statusCode": 400, "data": {}},
+          TiresMock.routeListTires: {"statusCode": 400, "data": {}},
         },
       );
 
@@ -102,9 +105,9 @@ void main() {
       DioAdapterHelper.createDioAdapter(
         dio: dio,
         routes: {
-          TiresMock.route: {
+          TiresMock.routeListTires: {
             "statusCode": 200,
-            "data": TiresMock.responseMockVazio,
+            "data": TiresMock.responseListTiresMockVazio,
           },
         },
       );
