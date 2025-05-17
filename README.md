@@ -1,6 +1,6 @@
 # Prolog App Desafio
 
-### App em funcionamento
+### App
 
 <img src="assets/imgs/readme/aplicativo_em_funcionamento.gif" alt="drawing" width="200"/>
 
