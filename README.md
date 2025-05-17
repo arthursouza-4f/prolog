@@ -1,5 +1,13 @@
 # Prolog App Desafio
 
+### App em funcionamento
+
+<img src="assets/imgs/readme/aplicativo_em_funcionamento.gif" alt="drawing" width="200"/>
+
+### Funcionamento sem internet
+<img src="assets/imgs/readme/sem_conexao_internet.gif" alt="drawing" width="200"/>
+
+
 ## Arquitetura
 Arquitetura escolhida: **Clean Architecture** 
 
