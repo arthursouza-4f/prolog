@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:prolog_app/tires/data/repository/tire_repository_impl.dart';
 import 'package:prolog_app/tires/domain/usecase/get_all_tires_use_case.dart';
-import 'package:prolog_app/app/components/container_sem_conexao.dart';
+import 'package:prolog_app/app/components/container_no_conection.dart';
 import 'package:prolog_app/app/components/error_component.dart';
+import 'package:prolog_app/tires/presentation/component/text_tire_status.dart';
 import 'package:prolog_app/tires/presentation/screen/detail_tires_screen.dart';
 import 'package:prolog_app/core/store/conection_store.dart';
 import 'package:prolog_app/tires/presentation/store/tire_screen_store.dart';
 import 'package:sizer/sizer.dart';
+import 'package:prolog_app/app/components/text_row_information.dart';
 
 class TiresScreen extends StatefulWidget {
   const TiresScreen({super.key});
@@ -55,7 +57,7 @@ class _TiresScreenState extends State<TiresScreen> {
         builder: (_) {
           //Verifica se a pessoa está conecta a internet
           if (!_connectivityStore.isConnected) {
-            return ContainerSemConexao();
+            return ContainerNoConection();
           }
 
           //Loading
@@ -121,26 +123,10 @@ class _TiresScreenState extends State<TiresScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          "Serial: ",
-                                          style: TextStyle(
-                                            color: Color(0xFF1D2549),
-                                          ),
-                                        ),
-                                        Text(
-                                          _tireScreenStore
-                                                  .tireCards
-                                                  .content![index]
-                                                  .serialNumber ??
-                                              '',
-                                          style: TextStyle(
-                                            color: Color(0xFF1D2549),
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                      ],
+                                    width: 45.w,
+                                    child: TextRowInformation(
+                                      text: "Serial: ",
+                                      value: _tireScreenStore.tireCards.content![index].serialNumber ?? '',
                                     ),
                                   ),
                                   SizedBox(
@@ -180,26 +166,10 @@ class _TiresScreenState extends State<TiresScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          "DOT: ",
-                                          style: TextStyle(
-                                            color: Color(0xFF1D2549),
-                                          ),
-                                        ),
-                                        Text(
-                                          _tireScreenStore
-                                                  .tireCards
-                                                  .content![index]
-                                                  .dot ??
-                                              '',
-                                          style: TextStyle(
-                                            color: Color(0xFF1D2549),
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                      ],
+                                    width: 45.w,
+                                    child: TextRowInformation(
+                                      text: "DOT: ",
+                                      value: _tireScreenStore.tireCards.content![index].dot ?? '',
                                     ),
                                   ),
                                   SizedBox(
@@ -248,33 +218,20 @@ class _TiresScreenState extends State<TiresScreen> {
                                             color: Color(0xFF1D2549),
                                           ),
                                         ),
-                                        Text(
-                                          "Descartado",
-                                          style: TextStyle(
-                                            color: Color(0xFFF24D30),
-                                            fontWeight: FontWeight.w600,
-                                          ),
+                                        TextTireStatus(
+                                          status:
+                                              _tireScreenStore
+                                                  .tireCards
+                                                  .content![index]
+                                                  .status!,
                                         ),
                                       ],
                                     ),
                                   ),
                                   SizedBox(
-                                    child: Row(
-                                      children: [
-                                        Text(
-                                          "Tamanho: ",
-                                          style: TextStyle(
-                                            color: Color(0xFF1D2549),
-                                          ),
-                                        ),
-                                        Text(
-                                          '${_tireScreenStore.tireCards.content![index].tireSize!.width}/${_tireScreenStore.tireCards.content![index].tireSize!.height}',
-                                          style: TextStyle(
-                                            color: Color(0xFF1D2549),
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                      ],
+                                    child: TextRowInformation(
+                                      text: "Tamanho: ",
+                                      value: '${_tireScreenStore.tireCards.content![index].tireSize!.width}/${_tireScreenStore.tireCards.content![index].tireSize!.height}',
                                     ),
                                   ),
                                 ],

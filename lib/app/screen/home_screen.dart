@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:prolog_app/app/components/container_seleciona_modulo.dart';
+import 'package:prolog_app/app/components/container_module_selection.dart';
 import 'package:prolog_app/tires/presentation/screen/tires_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(builder: (context) => TiresScreen()),
                       ),
-                  child: ContainerSelecionaModulo(
+                  child: ContainerModuleSelection(
                     title: 'Gestão de pneus',
                     imagePath: 'assets/imgs/gestao_pneu/icon_home_screen.png',
                   ),
