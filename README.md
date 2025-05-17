@@ -46,6 +46,6 @@ Na tabela a seguir é possível ver todas as exceções mapeadas no aplicativo.
 
 
 ## Desenho do aplicativo
-Antes de começar o desenvolvimento, decidi o que seria feito, e como seria feito, para assim que começar já ter tudo na cabeça e facilitar o processo. Nesse processo, criei um protótipo do aplicativo no figma, onde pode ser visto na imagem, e achado através desse [link]
+Antes de começar o desenvolvimento, decidi o que seria feito, e como seria feito, para assim que começar já ter tudo na cabeça e facilitar o processo. Nesse processo, criei um protótipo do aplicativo no figma, onde pode ser visto na imagem
 
 ![Imagem figma aplicativo](assets/imgs/readme/aplicativo.png)
